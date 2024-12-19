@@ -40,6 +40,17 @@ public class Account {
     } else {
         System.out.println("PIN tidak sama, periksa kembali.");
     }
+    System.out.println("\nUntuk melanjutkan, silakan masukkan kembali accountNumber dan PIN baru.");
+    System.out.print("Masukkan accountNumber: ");
+    String inputAccountNumber = scanner.nextLine();
+    System.out.print("Masukkan PIN: ");
+    String inputPin = scanner.nextLine();
+
+    if (inputAccountNumber.equals(this.accountNumber) && inputPin.equals(this.pin)) {
+            System.out.println("Verifikasi berhasil, Anda dapat melanjutkan transaksi.");
+        } else {
+                System.out.println("Verifikasi gagal. Nomor Akun atau Pin Salah.");
+        }
 }
 
     public double getBalance() {
